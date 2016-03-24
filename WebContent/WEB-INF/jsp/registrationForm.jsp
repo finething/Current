@@ -23,8 +23,8 @@
 			<legend>Address</legend>
 			<label for="houseNumber">House Number: </label> <input
 				id="houseNumber" name="houseNumber" type="text" /></br> <label
-				for="streetName">Street Name: </label> <input id="lastName"
-				name="lastName" type="text" /></br> <label for="city">City: </label> <input
+				for="streetName">Street Name: </label> <input id="streetName"
+				name="streetName" type="text" /></br> <label for="city">City: </label> <input
 				id="city" name="city" type="text" /></br> <label for="state">State:
 			</label> <input id="state" name="state" type="text" /> </br> <label for="zipCode">Zip
 				Code: </label> <input id="zipCode" name="zipCode" type="text" />

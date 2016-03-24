@@ -7,10 +7,11 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>WebContent/WEB-INF/springConfig.xml</config>
-		<config>WebContent/WEB-INF/databaseConfig.xml</config>
+		<config>src/configrations/batchConfig.xml</config>
 	</configs>
 	<autoconfigs>
+		<config>src/configrations/springConfig.xml</config>
+		<config>src/configrations/databaseConfig.xml</config>
 	</autoconfigs>
 	<configSets>
 	</configSets>

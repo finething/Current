@@ -3,7 +3,6 @@ package scanned.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import scanned.data.Address;
 import scanned.data.Person;
@@ -25,8 +24,8 @@ public class MainController {
 		return "registrationForm";
 	}
 	
-	@RequestMapping(value="/saved", method = RequestMethod.POST)
-	public String register(Person person, Address address){
+	@RequestMapping("/saved")
+	public String register(Person person,  Address address){
 		service.savePerson(person);
 		service.saveAddress(address);
 		return "saved";

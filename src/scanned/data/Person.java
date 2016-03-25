@@ -69,6 +69,14 @@ public class Person {
 	public void setSsn(String ssn) {
 		this.ssn = ssn;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Person [id=" + id + ", firstName=" + firstName + ", lastName="
+				+ lastName + ", middleName=" + middleName + ", age=" + age
+				+ ", ssn=" + ssn + "]";
+	}
 	
 	
 }

@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import scanned.data.Address;
 import scanned.data.Person;
+import scanned.service.ScheduledTask;
 import scanned.service.ServiceMine;
-
 
 @Controller
 public class MainController {
@@ -15,21 +15,21 @@ public class MainController {
 	private ServiceMine service;
 	
 	@RequestMapping("/")
-	public String index(){
+	public String index() {	
 		return "index";
 	}
-	
+
 	@RequestMapping("/registrationForm")
-	public String registrationForm(){
+	public String registrationForm() {		
 		return "registrationForm";
 	}
-	
+
 	@RequestMapping("/saved")
-	public String register(Person person,  Address address){
+	public String register(Person person, Address address) {
 		service.savePerson(person);
 		service.saveAddress(address);
 		return "saved";
-		
+
 	}
 
 	public ServiceMine getService() {
@@ -38,8 +38,5 @@ public class MainController {
 
 	public void setService(ServiceMine service) {
 		this.service = service;
-	}
-	
-	
-
+	}	
 }

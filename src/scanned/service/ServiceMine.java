@@ -12,7 +12,7 @@ import scanned.data.Person;
 public class ServiceMine {
 
 	private Dao dao;
-
+	
 	public ServiceMine() {
 	}
 

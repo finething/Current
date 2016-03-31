@@ -20,13 +20,13 @@ public class Mapper implements FieldSetMapper<Person> {
 		person.setMiddleName(input.readString(2));
 		person.setSsn(input.readString(3));
 		Date date = null;
-		SimpleDateFormat format = new SimpleDateFormat("DD-MMM-YYYY");
+		SimpleDateFormat format = new SimpleDateFormat("DD-MMM-YY");
 		try {
 			date = format.parse(input.readString(4));
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-		person.setDob(date);
+		person.setDob(new java.sql.Date(date.getTime()));
 		return person;
 
 	}

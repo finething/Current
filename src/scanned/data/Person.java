@@ -1,9 +1,8 @@
 package scanned.data;
 
-import java.util.Date;
+
+import java.sql.Date;
 import java.util.List;
-
-
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,7 +16,7 @@ import org.hibernate.annotations.CascadeType;
 @Entity
 public class Person {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
 	private String firstName;

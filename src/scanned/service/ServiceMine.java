@@ -1,5 +1,7 @@
 package scanned.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -31,7 +33,17 @@ public class ServiceMine {
 	}
 	
 	@Transactional(propagation = Propagation.REQUIRES_NEW)
+	public void savePersonList(List<? extends Person> input) {
+		dao.savePersonList(input);
+	}
+	
+	@Transactional(propagation = Propagation.REQUIRES_NEW)
 	public void saveAddress(Address address) {
-		dao.savePerson(address);
+		dao.saveAddress(address);
+	}
+	
+	@Transactional(propagation = Propagation.REQUIRES_NEW)
+	public void saveAddressess(List<? extends Address> addressess) {
+		dao.saveAddressess(addressess);
 	}
 }

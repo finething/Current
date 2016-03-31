@@ -1,1 +1,14 @@
-"zelalem","zewde","fikre","3444",43
+FIRST_NAME,LAST_NAME,MID_NAME,SSN,DOB
+Krdtest,Krdtest,R,556441122,01-APR-42
+Krdtest,Krdtest,,,01-APR-89
+Krdtest,Krdtest,,000000000,01-APR-39
+Ronald,McDonald,,453998777,18-AUG-80
+Ronald,McDonald,,453998777,18-AUG-80
+Justin,Case,,,14-FEB-82
+Justin,junior,,880223333,01-MAR-98
+John,Superman,Smith,012345678,03-MAR-20
+David,Stacey,,,16-MAR-70
+Sarah,Kennedy,,,01-JAN-84
+FirstName,LastName,,,01-DEC-99
+Ang,Lee,,447993513,02-FEB-86
+Carlos,Test2,,,01-JAN-40

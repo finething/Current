@@ -6,8 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Address {
-	
+public class Address {	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
@@ -15,22 +14,19 @@ public class Address {
 	private String streetName;
 	private String city;
 	private String state;
-	private Long zipCode;
+	private String zipCode;
 	
 	public Address() {
 		super();
 	}
 
-	
 	public long getId() {
 		return id;
 	}
 
-	
 	public void setId(long id) {
 		this.id = id;
 	}
-
 
 	public Long getHouseNumber() {
 		return houseNumber;
@@ -64,15 +60,13 @@ public class Address {
 		this.state = state;
 	}
 
-	public Long getZipCode() {
+	public String getZipCode() {
 		return zipCode;
 	}
 
-	public void setZipCode(Long zipCode) {
+	public void setZipCode(String zipCode) {
 		this.zipCode = zipCode;
 	}
-	
-	
 	
 
 }

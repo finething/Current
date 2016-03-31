@@ -4,12 +4,18 @@ import java.util.List;
 
 import org.springframework.batch.item.ItemWriter;
 
-import scanned.data.Person;
+import scanned.data.Address;
 import scanned.service.ServiceMine;
 
-public class Writer implements ItemWriter<Person> {
+public class WriterAdd implements ItemWriter<Address> {
 	
 	private ServiceMine service;
+
+	@Override
+	public void write(List<? extends Address> addressess) throws Exception {
+		service.saveAddressess(addressess);
+		
+	}
 
 	public ServiceMine getService() {
 		return service;
@@ -18,10 +24,4 @@ public class Writer implements ItemWriter<Person> {
 	public void setService(ServiceMine service) {
 		this.service = service;
 	}
-
-	@Override
-	public void write(List<? extends Person> input) throws Exception {
-		service.savePersonList(input);		
-	}
-
 }

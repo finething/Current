@@ -109,5 +109,15 @@
 			<artifactId>spring-batch-infrastructure</artifactId>
 			<version>3.0.6.RELEASE</version>
 		</dependency>
+		<dependency>
+			<groupId>activemq</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>20050407</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-asl</artifactId>
+			<version>0.9.5</version>
+		</dependency>
 	</dependencies>
 </project>

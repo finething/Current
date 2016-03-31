@@ -1,15 +1,19 @@
 package scanned.data;
 
 import java.util.Date;
+import java.util.List;
+
+
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
 
-import org.aspectj.lang.annotation.RequiredTypes;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Required;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
 @Entity
 public class Person {
 	@Id
@@ -19,11 +23,12 @@ public class Person {
 	private String firstName;
 	private String lastName;
 	private String middleName;
-	private Integer age;
+	private Date dob;
 	private String ssn;
-	
-	
-	
+	@OneToMany
+	@JoinTable(name="Person_Address")
+	@Cascade(value = { CascadeType.DELETE })
+	private List<Address> address;
 	public Person() {
 		
 	}
@@ -57,11 +62,11 @@ public class Person {
 	public void setMiddleName(String middleName) {
 		this.middleName = middleName;
 	}
-	public int getAge() {
-		return age;
+	public Date getDob() {
+		return dob;
 	}
-	public void setAge(Integer age) {
-		this.age = age;
+	public void setDob(Date age) {
+		this.dob = age;
 	}
 	public String getSsn() {
 		return ssn;
@@ -69,12 +74,29 @@ public class Person {
 	public void setSsn(String ssn) {
 		this.ssn = ssn;
 	}
+	
+	
+
+
+	public List<Address> getAddress() {
+		return address;
+	}
+
+
+	public void setAddress(List<Address> address) {
+		this.address = address;
+	}
+
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 
 	@Override
 	public String toString() {
 		return "Person [id=" + id + ", firstName=" + firstName + ", lastName="
-				+ lastName + ", middleName=" + middleName + ", age=" + age
+				+ lastName + ", middleName=" + middleName + ", dob=" + dob
 				+ ", ssn=" + ssn + "]";
 	}
 	

@@ -46,4 +46,19 @@ public class ServiceMine {
 	public void saveAddressess(List<? extends Address> addressess) {
 		dao.saveAddressess(addressess);
 	}
+	
+	@Transactional(propagation = Propagation.REQUIRES_NEW)
+	public void updatePerson(Person person) {
+		dao.updatePerson(person);
+	}
+	
+	@Transactional(propagation = Propagation.REQUIRES_NEW)
+	public List<Person> getPersons() {
+		return dao.getPersons();
+	}
+	
+	@Transactional(propagation = Propagation.REQUIRES_NEW)
+	public List<Address> getAddresses() {
+		return dao.getAddressess();
+	}
 }

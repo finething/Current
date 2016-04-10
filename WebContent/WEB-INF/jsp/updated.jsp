@@ -7,12 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	WELCOME 
-	<form action="/RetailP/registrationForm">
-		<input type="submit" value="Register">
-	</form>
-	<form action="/RetailP/map">
-		<input type="submit" value="Map">
-	</form>
+	<div>
+		<p>Updated</p>
+	</div>
+	<div>
+		<button name="back">Back</button>
+		<button name="exit">Exit</button>
+	</div>
 </body>
 </html>

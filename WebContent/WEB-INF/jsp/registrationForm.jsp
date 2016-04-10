@@ -4,7 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link href="${pageContext.request.contextPath}/resource/registration.css" rel="stylesheet" type="text/css"/>
+<link
+	href="${pageContext.request.contextPath}/resource/registration.css"
+	rel="stylesheet" type="text/css" />
 <title>Register</title>
 </head>
 <body>

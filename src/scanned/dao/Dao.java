@@ -2,6 +2,7 @@ package scanned.dao;
 
 import java.util.List;
 
+import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -47,6 +48,25 @@ public class Dao {
 		for (Address address : addressess) {
 		sessionFactory.getCurrentSession().save(address);
 		}
+	}
+	
+	@Transactional(propagation = Propagation.MANDATORY)
+	public void updatePerson(Person person) {
+		sessionFactory.getCurrentSession().update(person);
+	}
+	
+	@Transactional(propagation = Propagation.MANDATORY)
+	public List<Person> getPersons() {
+		String queryString="from Person";
+		Query query=sessionFactory.getCurrentSession().createQuery(queryString);
+		return query.list();		 
+	}
+	
+	@Transactional(propagation = Propagation.MANDATORY)
+	public List<Address> getAddressess() {
+		String queryString="from Address";
+		Query query=sessionFactory.getCurrentSession().createQuery(queryString);
+		return query.list();		 
 	}
 
 }

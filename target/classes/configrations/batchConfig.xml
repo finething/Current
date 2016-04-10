@@ -66,7 +66,7 @@
 	<bean id="writer" class="scanned.batch.Writer">
 		<property name="service" ref="serviceMine"></property>
 	</bean>
-	
+
 	<bean id="processor" class="scanned.batch.Processor"></bean>
 
 	<task:scheduled-tasks>
@@ -75,9 +75,9 @@
 	</task:scheduled-tasks>
 
 	<bean id="runScheduler" class="scanned.service.ScheduledTask"></bean>
-	
-	
-	
+
+
+
 	<bean id="readerAdd" class="org.springframework.batch.item.file.FlatFileItemReader">
 		<property name="resource" value="#{databaseProperties.inputFile2}"></property>
 		<property name="linesToSkip" value="1"></property>
@@ -96,10 +96,10 @@
 			</bean>
 		</property>
 	</bean>
-	
+
 	<bean id="writerAdd" class="scanned.batch.WriterAdd">
 		<property name="service" ref="serviceMine"></property>
 	</bean>
-	
+
 	<bean id="processorAdd" class="scanned.batch.ProcessorAdd"></bean>
 </beans>
